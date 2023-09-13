@@ -1,0 +1,43 @@
+<h1> Demo ngFor</h1>
+
+<ul class="list-group">
+    <li *ngFor="let fruit of fruits" class="list-group-item">{{fruit}}</li>
+</ul>
+
+<h1>ngIf</h1>
+<div *ngIf="isAdmin; then admin; else normal"></div>
+
+<ng-template #admin>
+    <h2>You are Admin with special Permissions</h2>
+</ng-template>
+
+<ng-template #normal>
+    <h2>You are  a Normal User</h2>
+</ng-template>
+
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'">You Selected Red Color</div>
+    <div *ngSwitchCase="'blue'">You Selected Blue Color</div>
+    <div *ngSwitchCase="'green'">You Selected Green Color</div>
+    <div *ngSwitchCase="'magenta'">You Selected Magenta Color</div>
+    <div *ngSwitchCase="'orange'">You Selected Orange Color</div>
+    <div *ngSwitchDefault>Pick your color</div>
+</div>
+
+<select (change)="onSelect(options.value)" #options>
+    <option value="default" >Pick a Color</option>
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="magenta">Magenta</option>
+    <option value="orange">Orange</option>
+</select>
+
+<select [(ngModel)]="color">
+    <option value="default" >Pick a Color</option>
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="magenta">Magenta</option>
+    <option value="orange">Orange</option>
+</select>

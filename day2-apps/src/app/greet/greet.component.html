@@ -1,0 +1,14 @@
+<h1>Event Binding with Template reference</h1>
+
+<span>Enter Data:</span> <input type="text" id="t1" #inputData>
+<button (click)="handleClick(inputData.value)">Get Data</button>
+
+<br/>
+<input type="text" id="t2"  value="{{message}}" [disabled]="disableFiled">
+
+<button (click)="toggleValue()">Toggle</button>
+<br/>
+
+<input type="text" id="t3" [(ngModel)]="message">
+
+<h1>{{message}}</h1>
