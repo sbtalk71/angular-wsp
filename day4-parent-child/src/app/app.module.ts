@@ -6,6 +6,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { EmplistComponent } from './emplist/emplist.component';
 import { EmpDetailsComponent } from './emp-details/emp-details.component';
+import { EmpService } from './emp.service';
 
 @NgModule({
   declarations: [

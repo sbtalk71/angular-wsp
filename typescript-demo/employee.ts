@@ -1,6 +1,8 @@
+import { Address } from "./address";
+
 export class Employee{
 
-constructor(private id:number, private name:string,private salary:number){
+constructor(private id:number, private name:string,private salary:number,private address:Address){
 
 }
 

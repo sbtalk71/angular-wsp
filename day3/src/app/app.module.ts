@@ -9,6 +9,7 @@ import { Highlighter2Directive } from './highlighter2.directive';
 import { PipesComponent } from './pipes/pipes.component';
 import { DemoPipePipe } from './demo-pipe.pipe';
 import { PowerPipe } from './power.pipe';
+import { UpperCasePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { PowerPipe } from './power.pipe';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [UpperCasePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
