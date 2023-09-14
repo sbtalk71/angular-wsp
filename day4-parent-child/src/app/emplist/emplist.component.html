@@ -1,1 +1,13 @@
-<p>emplist works!</p>
+<h1>Employees List</h1>
+
+<ul class="employees">
+    <li *ngFor="let emp of empdata">
+        <button (click)="getEmp(emp)">
+            <span class="badge">{{emp.id}}</span>
+            <span class="name">{{emp.name}}</span>
+        </button>
+    </li>
+</ul>
+
+
+<app-emp-details [emp]="selectedEmp"></app-emp-details>

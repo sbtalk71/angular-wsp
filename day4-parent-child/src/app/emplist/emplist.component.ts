@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Emp } from '../emp';
+import { EMPDATA } from '../emp-mock-data';
 
 @Component({
   selector: 'app-emplist',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class EmplistComponent {
 
+  empdata:Emp[]=EMPDATA;
+
+  selectedEmp!:Emp
+
+  getEmp(emp:Emp){
+    this.selectedEmp=emp;
+    console.log(emp);
+  }
 }

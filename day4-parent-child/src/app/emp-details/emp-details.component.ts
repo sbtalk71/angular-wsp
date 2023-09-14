@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
+import { Emp } from '../emp';
 
 @Component({
   selector: 'app-emp-details',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class EmpDetailsComponent {
 
+  @Input() emp!:Emp
+  
 }
