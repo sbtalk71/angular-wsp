@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { Pane, ViewChildrenComp } from './viewchildrencomp/viewchildrencomp.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { Pane, ViewChildrenComp } from './viewchildrencomp/viewchildrencomp.comp
     ParentComponent,
     ChildComponent,
     ViewChildrenComp,
-    Pane
+    Pane,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule
