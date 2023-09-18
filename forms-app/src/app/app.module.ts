@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { TdfComponent } from './tdf/tdf.component';
 import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ReactiveFbComponent } from './reactive-fb/reactive-fb.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TdfComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ReactiveFbComponent
   ],
   imports: [
     BrowserModule,

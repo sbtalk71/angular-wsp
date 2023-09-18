@@ -8,6 +8,8 @@ import {FormGroup,FormControl,Validators} from '@angular/forms'
 })
 export class ReactiveFormComponent {
 
+  courseNames:string[]=["Java","Python","Scala","Ruby","C Sharp"];
+
   public regForm:FormGroup=new FormGroup({
     studentName:new FormControl('',Validators.required),
     email:new FormControl('',Validators.email),
@@ -15,6 +17,11 @@ export class ReactiveFormComponent {
     courseName:new FormControl('')
   })
 
+  get studentName(){
+    return this.regForm.get('studentName');
+  }
+
+ 
   public onSubmit(){
     console.log(this.regForm.value);
   }

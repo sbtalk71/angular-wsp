@@ -4,6 +4,7 @@
         <label>Name</label>
         <input type="text" formControlName="studentName">
        <div *ngIf="studentName.errors?.['required'] && studentName.touched" class="error-text">Name is Invalid</div>
+       <div *ngIf="studentName.errors?.['forbiddenName']" class="error-text">Name cannot be Bob</div>
     </div>
     <div>
         <label>Email</label>
@@ -20,5 +21,14 @@
             <option *ngFor="let course of courseNames" value="{{course}}">{{course}}</option>
             </select>
     </div>
+    <div  formArrayName="references" *ngFor="let ref of references.controls; let i=index">
+        <label>Reference Emails</label>
+        <input type="email" [formControlName]="i">
+        <button (click)="removeEmail(i)">X</button>
+    </div>
+    <div>
+        <button (click)="addEmail()">Add refernce email</button>
+    </div>
     <button>Register</button>
     </form>
+
