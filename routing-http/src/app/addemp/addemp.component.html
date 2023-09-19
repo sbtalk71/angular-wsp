@@ -1,0 +1,24 @@
+
+<div>
+    <form #empForm="ngForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label>Employee Id</label>
+            <input type="text" [(ngModel)]="emp.empId" name="empId" >
+        </div>
+        <div>
+            <label>Employee Name</label>
+            <input type="text" [(ngModel)]="emp.name" name="name" >
+        </div>
+        <div>
+            <label>Location City</label>
+            <input type="text" [(ngModel)]="emp.city" name="city">
+        </div>
+        <div>
+            <label>Employee Salary</label>
+            <input type="text" [(ngModel)]="emp.salary" name="salary">
+        </div>
+        <div>
+            <button>Save</button>
+        </div>
+    </form>
+</div>

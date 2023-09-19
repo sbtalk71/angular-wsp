@@ -47,7 +47,7 @@ router.post('/', function (req, res) {
     
     // create an object of new Item
     let newItem = {
-        empId: req.body.empId, // generated in above step
+        empId: parseInt(req.body.empId), // generated in above step
         name: req.body.name, // value of `title` get from POST req
         city: req.body.city, // generated in above step
         salary: req.body.salary // default value is set to false
@@ -100,10 +100,11 @@ router.put('/:id', function (req, res) {
 // array of data, match by `id` find item and then delete
 router.delete('/:id', function (req, res) {
     // find item from array of data
+   
     let found = data.find(function (item) {
-        return item.id === parseInt(req.params.id);
+        return item.empId === parseInt(req.params.id);
     });
-
+    console.log("reached delete method..",found,req.params.id)
     if (found) {
         // if item found then find index at which the item is
         // stored in the `data` array

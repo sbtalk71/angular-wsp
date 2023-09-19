@@ -1,0 +1,22 @@
+<h1> Find Employee Details</h1>
+<div>
+<label>Enter Emp Id</label>
+<input type="text"  #inputId>
+<button (click)="findEmp(inputId.value)">Find</button>
+</div>
+<hr>
+<div *ngIf="emp; then showEmp;else errorMessage"></div>
+<ng-template #showEmp>
+<div>
+<h1> Employee Details</h1>
+    <span>{{emp.empId}}</span>
+    <span>{{emp.name}}</span>
+    <span>{{emp.salary}}</span>
+    <span>{{emp.city}}</span>
+</div>
+
+</ng-template>
+
+<ng-template #errorMessage>
+    <h2>{{errorMessage}}</h2>
+</ng-template>
