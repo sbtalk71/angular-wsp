@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Emp } from '../emp';
 import { EmpService } from '../emp.service';
 
+import {Router} from '@angular/router';
+
 @Component({
   selector: 'app-emplist',
   templateUrl: './emplist.component.html',
@@ -11,7 +13,7 @@ export class EmplistComponent implements OnInit {
 
   empdata!:Emp[];
 
-  constructor(private _empService:EmpService){
+  constructor(private _empService:EmpService,private router: Router){
 
   }
   ngOnInit(): void {
@@ -24,5 +26,9 @@ loadEmpList(){
   deleteEmp(id:number){
     this._empService.deleteEmp(id).subscribe(data=>console.log(data));
     this.loadEmpList();
+  }
+
+  handleNavigation(id:number){
+      this.router.navigate(["emplist",id]);
   }
 }
