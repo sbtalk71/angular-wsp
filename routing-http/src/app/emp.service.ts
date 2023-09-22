@@ -13,7 +13,7 @@ export class EmpService {
   constructor(private http:HttpClient) { }
 
   public getEmpList(): Observable<Emp[]>{
-    return this.http.get<Emp[]>(this.base_url)
+    return this.http.get<Emp[]>(this.base_url,{headers:{Accept:"application/json"}})
   }
 
   public findEmpById(id:string): Observable<Emp>{

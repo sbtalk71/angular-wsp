@@ -1,0 +1,9 @@
+<nav>
+  <a href="/">Home</a>
+  <a routerLink="profile">Profile</a>
+  <button *ngIf="!isUserLoggedIn" (click)="login()">login</button>
+  <button *ngIf="isUserLoggedIn" (click)="logout()">logout</button>
+</nav>
+
+<hr>
+<router-outlet></router-outlet>
